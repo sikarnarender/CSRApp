@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar transparent class="x-navbar">
+    <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+     </button>
+    <ion-title>
+      <!-- <i class="fa fa-newspaper-o fa-2x" aria-hidden="true">&nbsp;&nbsp; News </i> -->
+      <ion-icon name="easel"></ion-icon> &nbsp;News
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-refresher (ionRefresh)="refreshAll($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let news of newses" (click)="getNewsbyId($event, news)">
+    <ion-card-content>
+      <span>
+        <ion-icon  style="vertical-align:middle;float:left;font-size: 2.2em" [name]="news.icon"></ion-icon>
+          <h1>&nbsp;{{news.heading}}</h1></span>
+          <h3 [innerHTML]="news.shortDesc">
+            </h3>
+            <h4 class="dateStyle" >{{news.createdOn | date: 'dd/MM/yyyy'}}</h4>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

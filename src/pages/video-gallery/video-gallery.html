@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar transparent class="x-navbar">
+    <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+     </button>
+    <ion-title>
+      <ion-icon name="easel"></ion-icon> &nbsp;Video Gallery
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content overflow-scroll="true">
+  <video *ngFor="let video of videos" padding style="width: 100%;height: 200px;"  controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline">
+    <source src="{{video.fileUrl}}#t=0.1" type="video/mp4" />
+  </video>
+</ion-content>

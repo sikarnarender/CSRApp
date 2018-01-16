@@ -14,3 +14,32 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.list-header{
+    font-weight: bold;
+    font-size: large;
+}
+h4 span { 
+    color: #FFFFFF;
+    font-weight: bold; 
+    padding: 10px; 
+    position: absolute; 
+    top: 1px; 
+    left: 0; 
+    width: 100%; 
+ }
+
+ .badge-ios-danger {
+    position:'absolute' !important;
+    top:1 !important;
+    // right:1 !important;
+    width:20 !important;
+    height:20 !important;
+    background-Color: '#FF0000' !important;
+  }
+
+  .ion-badge{
+    line-height: 1.5 !important;
+    margin-right: -4px;
+    font-size: 17px;
+  }
+ 

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar transparent class="x-navbar">
+    <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title> Our R.O. Plants
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button class="right-align-btn icon-image-size30" (click)="refreshMap()">
+      <!-- <i class="fa fa-refresh" aria-hidden="true"></i> -->
+      <ion-icon name="refresh"></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-item >  
+    <ion-label text-wrap>R.O. Plants: {{selectedROPlantlocation.activityName}}</ion-label>
+    <ion-select [(ngModel)]="selectedROPlantlocation"  (ionChange)="getSelectedROPlantLocation($event)">
+      <ion-option text-wrap *ngFor ="let location of locations" [value]="location"  (click)="getSelectedLocation()">{{location.activityName}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <div #map id="map"></div>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar transparent class="x-navbar">
+    <ion-title>
+        <ion-icon  [name]="news.icon"></ion-icon> &nbsp;{{news.heading}}
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="color: white;">
+    <div [innerHTML]="news.newsContent">
+      </div>
+    <!-- {{news.newsContent }} -->
+   <!--<ion-card>
+    <io n-card-header>{{news.shortDesc}}</ion-card-header>
+    <ion-card-content>  {{news.newsContent }}</ion-card-content>
+  </ion-card> -->
+</ion-content>

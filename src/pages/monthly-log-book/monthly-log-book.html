@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar transparent class="x-navbar">
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+     </button>
+    <ion-title>
+      <!-- <i class="fa fa-newspaper-o fa-2x" aria-hidden="true"> </i> -->
+      <ion-icon [name]="home"></ion-icon> Monthly Log Book
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list >
+    <ion-item-group>
+      <ion-item-divider color="water">Expenses</ion-item-divider>
+      <ion-item>
+        <ion-label color="primary" stacked> Superwiser Salary</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="monthlyLogDetails.superwiserSalary"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Service Charge (Per Plant)</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="monthlyLogDetails.serviceCharge"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Water Testing Report</ion-label>
+        <ion-input placeholder="" [(ngModel)]="monthlyLogDetails.waterTestingReport"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked> Ro Filter ( Sonic Tech.)</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="monthlyLogDetails.roFilter"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked> Enveter Sabhariya</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="monthlyLogDetails.enveterSabhariya"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Sanetery  Item</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="monthlyLogDetails.saneteryItem"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Canvece</ion-label>
+        <ion-input placeholder="" [(ngModel)]="monthlyLogDetails.canvece"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked> Laber Charge Plumber</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="monthlyLogDetails.laberChargePlumber"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked> Accountin Charges</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="monthlyLogDetails.accountinCharges"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Pooja Item</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="monthlyLogDetails.poojaItem"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Flax Laber & Stager Charge</ion-label>
+        <ion-input placeholder="" [(ngModel)]="monthlyLogDetails.flaxLaberStagerCharge"></ion-input>
+      </ion-item>
+    </ion-item-group>
+    <ion-buttons end>
+      <button color="primary" ion-button (click)="close()">
+            <i class="fa fa-times" aria-hidden="true"></i>&nbsp;Close
+          </button>
+          <button *ngIf="!result.isActivityDone" color="primary" ion-button (click)="save()">
+            <i class="fa fa-cloud" aria-hidden="true"></i>&nbsp;Save
+          </button>
+    </ion-buttons>
+  </ion-list>
+</ion-content>

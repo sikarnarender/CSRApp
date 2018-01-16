@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar transparent class="x-navbar">
+    <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>
+      <ion-icon [name]="menu.icon"></ion-icon> &nbsp;{{menu.pageName}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding style="color: white;">
+    <div [innerHTML]="selectedPage.pageContent">
+      </div>
+  <!-- <ion-card>
+    <ion-card-header>{{menu.title}}</ion-card-header>
+    <ion-card-content>
+      <div [innerHTML]="selectedPage.pageContent">
+      </div>
+    </ion-card-content>
+  </ion-card> -->
+</ion-content>

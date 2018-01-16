@@ -1,5 +1,10 @@
 {
   "name": "BoschCSR.MobileApp",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "dev_push": true,
+  "gcm_key": 597565287685
 }

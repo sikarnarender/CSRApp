@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "733285509807",
+    "firebase_url": "https://boschcsrfirebase.firebaseio.com",
+    "project_id": "boschcsrfirebase",
+    "storage_bucket": "boschcsrfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733285509807:android:d43caff26140fed7",
+        "android_client_info": {
+          "package_name": "com.boschindia.www"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733285509807-e4vnibjv1rhtd09dljflab7g1no5vb54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwGmMKJKbnMKuDOHBkwcDeDOTiUnTs7X4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

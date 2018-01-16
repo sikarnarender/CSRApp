@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar transparent class="x-navbar">
+    <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title> Monthly Logs
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h1 [hidden]="isCSRActivityAvailable" class="text-alignment">No Activity mapped to this User...</h1>
+  <div [hidden]="!isCSRActivityAvailable">
+    <span [hidden]="!isExpenseAddedFortheMonth" class="text-alignment">Activity has been added for the month!</span>
+    <ion-buttons end>
+      <button [disabled]="isExpenseAddedFortheMonth" color="primary" ion-button (click)="addEditLogDetails($event,'true', {})">
+          <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Add
+        </button>
+    </ion-buttons>
+    <ion-item >  
+        <ion-label text-wrap>Activity:{{selectedActivity.activityName}}</ion-label>
+        <ion-select [(ngModel)]="selectedActivity"  (ionChange)="getSelectedActivity($event)">
+          <ion-option text-wrap *ngFor ="let activity of userActivityList" [value]="activity"  (click)="getSelectedLocation()">{{activity.activityName}}</ion-option>
+        </ion-select>
+      </ion-item>
+    <ion-card color="tiles" *ngFor="let log of logs">
+      <button class="btn-list" ion-button block (click)="addEditLogDetails($event,'false',log)">
+    <ion-card-content  >
+      <ion-badge  class="ion-badge" color="danger">{{log.monthlyLogId}}</ion-badge>
+      <h3><span>{{log.createdDate| date: 'MMMM'}} &nbsp; {{log.createdDate| date: 'y'}}</span></h3>
+    </ion-card-content>
+  </button>
+    </ion-card>
+  </div>
+</ion-content>

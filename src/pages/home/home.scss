@@ -1,3 +1,61 @@
 page-home {
+  // .home-background {
+  //   background: url(/assets/images/header.png) no-repeat fixed center !important;
+  //   background-size: cover;
+  // }
 
+  // background-image: url('/assets/images/Slide1.JPG');
+	// background-size: cover;
+
+
+  $loading-md-spinner-dots-color : #f53d3d;
+.icon-image-size50{
+  font-size: 50px;
 }
+
+.icon-image-size30{
+  font-size: 30px;
+}
+.font-size20{
+  font-size: 20px;
+}
+.right-align-btn{
+  float:right; /* shift to right for alignment*/
+}
+.left-align-txt{
+  text-align:left !important; /* shift to right for alignment*/
+}
+.login-style{
+  padding-right:10px; 
+  color:#fff;;
+}
+
+.item{
+  margin:2px auto;
+}
+
+.ion-slides{
+  height:inherit !important;
+}
+
+.text-on-bottom > .button-inner {
+  flex-direction: column;
+}
+
+.col-padding {
+  padding: 1.5px !important;
+}
+
+.dateStyle{
+  float:right;  
+  color:#154D70;
+}
+
+.toolbar-title-md {
+  padding: 0px 0px 0px 0px;
+  margin-top: 4px;
+}
+
+  }
+  
+

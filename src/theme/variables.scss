@@ -33,13 +33,7 @@ $app-direction: ltr;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
-$colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
-);
+$colors: ( primary: #154D70, secondary: #01796F, danger: #f53d3d, light: #f4f4f4, dark: #222, water: #1ca3ec, tiles: #2389da );
 
 
 // App iOS Variables
@@ -84,5 +78,70 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+// @import "roboto";
+// @import "noto-sans";
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/opensans/400/opensans-regular-webfont.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: semi-bold;
+    font-weight: 600;
+    src: url('../assets/fonts/opensans/600/opensans-semibold-webfont.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: bold;
+    font-weight: 700;
+    src: url('../assets/fonts/opensans/700/opensans-bold-webfont.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: extra-bold;
+    font-weight: 900;
+    src: url('../assets/fonts/opensans/900/opensans-extrabold-webfont.ttf');
+}
+
+$font-family-base: "Open Sans", sans-serif !default;
+
+body {
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+    color: black !important;
+}
+
+h1, h2, button, p {
+    font-family: "Open Sans" !important;
+}
+
+@import "../assets/scss/font-awesome/font-awesome";
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../assets/fonts/font-awesome/fontawesome-webfont.eot');
+    src: url('../assets/fonts/font-awesome/fontawesome-webfont.eot') format('embedded-opentype'), url('../assets/fonts/font-awesome/fontawesome-webfont.woff2') format('woff2'), url('../assets/fonts/font-awesome/fontawesome-webfont.woff') format('woff'), url('../assets/fonts/font-awesome/fontawesome-webfont.ttf') format('truetype'), url('../assets/fonts/font-awesome/fontawesome-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.x-navbar {
+    background-image: url('../assets/images/Slide1.JPG');
+    background-size: cover;
+}
+
+.toolbar-title-md
+{
+    color: white !important;
+}
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default
+{
+    color: white !important;
+}

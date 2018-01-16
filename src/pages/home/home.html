@@ -1,18 +1,49 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+  <ion-navbar transparent class="x-navbar">
+    <button ion-button menuToggle style="color: beige;">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title class="left-align-txt">
+        <img src="assets/images/Bosch.png"> 
+        <!-- BOSCH -->
+    </ion-title>
+    <ion-buttons end>
+      <button *ngIf="!isLoggedIn" ion-button class="right-align-btn" (click)="showLogin()">
+      <i class="fa fa-power-off fa-2x" aria-hidden="true"></i>
+    </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content>
+  <!-- <img src="assets/images/header.png" /> -->
+    <ion-slides effect="fade" class="ion-slides" parallax="true" autoplay="2000" speed="1000" pager  loop="true"  slidesPerView="1" #homeSlider>
+      <ion-slide *ngFor="let slide of homePageSlides">
+        <img src={{slide.image}}>
+      </ion-slide>
+    </ion-slides>
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+  <ion-card *ngFor="let news of newses" (click)="getNewsbyId($event, news)">
+    <ion-card-content>
+      <span>
+          <ion-icon  style="vertical-align:middle;float:left;font-size: 2.2em" [name]="news.icon"></ion-icon>
+        <!-- <i class="fa fa-newspaper-o fa-2x" aria-hidden="true" style="vertical-align:middle;float:left"></i> -->
+          <h1>&nbsp;{{news.heading}}</h1></span>
+      <h2 [innerHTML]="news.shortDesc"></h2>
+      <h4 class="dateStyle" >{{news.createdOn | date: 'dd/MM/yyyy'}}</h4>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+<ion-footer transparent >
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3 class="col-padding" *ngFor="let tab of bottomTabs">
+        <button ion-button  full  class="text-on-bottom x-navbar" (click)="navigateBottomTabs(tab)">
+            <i class="fa fa-{{tab.icon}}" aria-hidden="true"> </i>
+            <label>{{tab.title}}</label>
+        </button>
+      </ion-col>
+  </ion-row>
+  </ion-grid>
+</ion-footer>

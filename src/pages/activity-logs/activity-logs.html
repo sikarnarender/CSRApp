@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar transparent class="x-navbar">
+    <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title> Daily logbook
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h1 [hidden]="isCSRActivityAvailable" class="text-alignment">Oops...No R.O. plant is assigned to you. Pleaes contact administrator.</h1>
+  <div [hidden]="!isCSRActivityAvailable">
+    <span [hidden]="!isActivityAddedFortheDay" class="text-alignment">Log book has been added for the day!</span>
+    <ion-buttons end>
+      <button [disabled]="isActivityAddedFortheDay" color="primary" ion-button (click)="addEditLogDetails($event,'true', {})">
+          <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Add
+        </button>
+    </ion-buttons>
+    <ion-item >  
+        <ion-label text-wrap>{{selectedActivity.activityName}}</ion-label>
+        <ion-select [(ngModel)]="selectedActivity"  (ionChange)="getSelectedActivity($event)">
+          <ion-option text-wrap *ngFor ="let activity of userActivityList" [value]="activity"  (click)="getSelectedLocation()">{{activity.activityName}}</ion-option>
+        </ion-select>
+      </ion-item>
+    <ion-card color="tiles" *ngFor="let log of logs">
+      <button class="btn-list" ion-button block (click)="addEditLogDetails($event,'false',log)">
+    <ion-card-content  >
+      <ion-badge  class="ion-badge" color="danger">{{log.logId}}</ion-badge>
+      <h3><span>{{log.createdOn| date: 'dd/MM/yyyy H:mm'}}</span></h3>
+    </ion-card-content>
+  </button>
+    </ion-card>
+  </div>
+</ion-content>

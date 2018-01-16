@@ -1,0 +1,43 @@
+page-activity-logs {
+    .header .col {
+        background-color:lightgrey;
+    }
+    
+    .col {
+        border: solid 1px grey;
+        border-bottom-style: none;
+        border-right-style: none;
+        max-width :25% !important;
+    }
+    
+    .col:last-child {
+        border-right: solid 1px grey;
+    }
+    
+    .row:last-child .col {
+        border-bottom: solid 1px grey;
+    }
+    .text-alignment{
+        text-align: center !important;
+        font-style: italic;
+        color:  #f53d3d;
+    }
+    .disabled {
+        color: gray;
+        border: medium solid gray;
+      }
+      .ion-badge{
+        line-height: 1.5 !important;
+        margin-right: -4px;
+        font-size: 15px;
+      }
+
+      .btn-list{
+          height: 50px !important;
+          
+      }
+      h3 span {
+        color: #FFFFFF;
+      }
+
+}

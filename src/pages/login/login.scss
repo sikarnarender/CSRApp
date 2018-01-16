@@ -1,0 +1,69 @@
+page-login {
+    // $modal-inset-min-width : "768px" !default;
+    // $modal-inset-min-height-small:"300px" !default;
+    // $modal-inset-min-height-large:"300px" !default;
+    // $modal-inset-width:"600px" !default;
+    // $modal-inset-height-small:"300px" !default;
+    // $modal-inset-height-large:"300px" !default;
+   
+    .sample-modal-page{
+        position: absolute;
+        overflow: hidden !important;
+        overflow-y: hidden !important;
+        border-radius: 2px;
+        width: 80%;
+        // height: 35vh;
+        min-height: 400px !important;
+        max-height: 400px !important;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border: 0;
+        box-shadow: 0 16px 20px rgba(0,0,0,.5);
+        // background-color: #fafafa;
+    }
+    .right-align-btn{
+        float:right; /* shift to right for alignment*/
+        padding: -10px;
+      }
+    .error-toast-style{
+        text-align:center;
+        color: red;
+      }
+      .success-toast-style{
+        text-align:center;
+        color:green;
+      }
+      .warning-toast-style{
+        text-align:center;
+        color: orange;
+      }
+
+      .no-scroll .scroll-content{
+        overflow-y: hidden !important;
+   }
+
+   .heading-font-style{
+    margin-top:10px !important;
+    text-align: center;
+    color: #EE1C27;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .button-close {
+    height:1.0em !important;
+    font-size: 1.8rem !important;
+    background-color: #154D70!important;
+    margin:-1.0rem 0.1rem !important;
+    padding:0px 0.5em !important
+  }
+  .button-login {
+    height:2.0em !important;
+    font-size: 2.0rem !important;
+  }
+  
+    
+}

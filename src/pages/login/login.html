@@ -1,0 +1,40 @@
+<ion-navbar class="modal-wrapper" *navbar>
+</ion-navbar>
+<ion-content class="no-scroll sample-modal-page">
+  <!-- <span class="heading-font-style"><h3>Sign In to see more...</h3></span> -->
+  <!-- <button ion-button class="right-align-btn button-close" (click)="dismiss()">
+      <i class="fa fa-times" aria-hidden="true"> </i>
+       </button>-->
+       <ion-buttons end>
+          <button class="button-close" ion-button (click)="dismiss()">
+              <i   class="fa fa-times" aria-hidden="true"> </i>
+               </button>
+       </ion-buttons>
+  <div style="text-align:center" padding>
+    <img src="assets/images/Bosch_Logo_Red.png" />
+  </div>
+  <span class="heading-font-style"><h3>Sign In to see more...</h3></span>
+  <ion-list>
+    <!-- <ion-item color="secondary">
+      <ion-label class="heading-font-style">Sign In to see more...
+        <button ion-button class="right-align-btn button-close" (click)="dismiss()">
+             <i   class="fa fa-times" aria-hidden="true"> </i>
+              </button>
+      </ion-label>
+    </ion-item> -->
+    <ion-item>
+      <ion-label color="primary" floating>User Name</ion-label>
+      <ion-input name="userName" [(ngModel)]="userName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Password</ion-label>
+      <ion-input name="password" type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button full icon-start color="primary" class="button-login" (click)="login()">
+         <ion-icon name="log-in"></ion-icon>
+           Login
+          </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

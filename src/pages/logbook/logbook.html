@@ -1,0 +1,183 @@
+<ion-header>
+  <ion-navbar transparent class="x-navbar">
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+     </button>
+    <ion-title>
+      <!-- <i class="fa fa-newspaper-o fa-2x" aria-hidden="true"> </i> -->
+      <ion-icon [name]="home"></ion-icon> Logbook
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list >
+    <ion-item-group>
+      <ion-item-divider color="water">TDS of Water</ion-item-divider>
+      <ion-item>
+        <ion-label color="primary" stacked> Raw</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.tds_water_row.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Product</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.tds_water_product.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Reject</ion-label>
+        <ion-input placeholder="" [(ngModel)]="resultLogDetails.tds_water_reject.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider color="water">Hardness of Water</ion-item-divider>
+      <ion-item>
+        <ion-label color="primary" stacked> Hardness of Raw Water</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.hrd_row_water.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="water">pH of Water</ion-item-divider>
+      <ion-item>
+        <ion-label color="primary" stacked> Raw</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.ph_water_row.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Product</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.ph_water_product.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Reject</ion-label>
+        <ion-input placeholder="" [(ngModel)]="resultLogDetails.ph_water_reject.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider color="water">Temperature of Water</ion-item-divider>
+      <ion-item>
+        <ion-label color="primary" stacked> Raw Water Temperature</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.temp_water_raw.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="water">Water Meter Reading</ion-item-divider>
+      <ion-item>
+        <ion-label color="primary" stacked> Raw</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.water_meter_reading_row.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Product</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.water_meter_reading_product.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Reject</ion-label>
+        <ion-input placeholder="" [(ngModel)]="resultLogDetails.water_meter_reading_reject.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="water">Electricity Meter Reading</ion-item-divider>
+      <ion-item>
+        <ion-label color="primary" stacked> Borewell</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.electricity_meter_borewell.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Plant</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.electricity_meter_reading_plant.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="water">Pressure Reading</ion-item-divider>
+      <ion-item>
+        <ion-label color="primary" stacked> Micron Filter In</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.pressure_reading_micron_in.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Micron Filter Out</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.pressure_reading_micron_out.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked> Membrane 1 In</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.pressure_reading_membrane1_in.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Membrane 2 In</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.pressure_reading_membrane2_in.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked> Membrane 3 In</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.pressure_reading_membrane3_in.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Membrane 3 Out</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.pressure_reading_membrane3_out.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider color="water">Flow Rate</ion-item-divider>
+      <ion-item>
+        <ion-label color="primary" stacked> Product Flow Rate</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.product_flow_rate.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item>
+        <ion-label color="primary" stacked> Reject Flow Rate</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.reject_flow_rate.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="water">Total Water Distributed</ion-item-divider>
+      <ion-item>
+        <ion-label color="primary" stacked> Can</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.tds_water_distributed_can.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Direct</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.tds_water_distributed_direct.atrribValue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Free/CSR</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.tds_water_distributed_free_csr.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+    <hr class="horigontal-border">
+
+    <ion-item-group>
+      <ion-item>
+        <ion-label color="primary" stacked> Antiscalant Qty for dosing tank</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.antiscalant_qty_dosing_tank.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item>
+        <ion-label color="primary" stacked> Micron filter change </ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.micron_filter_change.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item>
+        <ion-label color="primary" stacked> Multi grade Filter back wash Time </ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.multi_filter_wash_time.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item>
+        <ion-label color="primary" stacked> Total income (Recharge) </ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="resultLogDetails.total_income.atrribValue"></ion-input>
+      </ion-item>
+    </ion-item-group>
+    <ion-buttons end>
+      <button color="primary" ion-button (click)="close()">
+            <i class="fa fa-times" aria-hidden="true"></i>&nbsp;Close
+          </button>
+          <button *ngIf="!res.isActivityDone" color="primary" ion-button (click)="save()">
+            <i class="fa fa-cloud" aria-hidden="true"></i>&nbsp;Save
+          </button>
+    </ion-buttons>
+  </ion-list>
+</ion-content>

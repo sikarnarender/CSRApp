@@ -1,19 +1,47 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
+    <img src="assets/images/Slide1.JPG" />
+
+    <!-- <span class="badge icon-badge" ng-model="firstinitial" style="color:white !important;">
+        </span> -->
+    <h4 [hidden]="!isLoggedIn">
+      <span> 
+        <ion-badge class="ion-badge" color="primary">{{user.firstinitial}}</ion-badge>&nbsp; {{user.firstName}}&nbsp;{{user.lastName}}</span>
+    </h4>
+    <!-- <ion-toolbar> -->
+    <!-- </ion-toolbar> -->
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+      <button menuClose ion-item (click)="openPage(homeMenu)">
+            <ion-icon  [name]="homeMenu.icon"></ion-icon>
+            {{homeMenu.title}}
+          </button>
+      <ion-list-header class="list-header">Search</ion-list-header>
+      <!-- <button menuClose ion-item *ngFor="let static of staticMenus" (click)="navigateStaticMenus($event, static)">
+        <ion-icon  [name]="static.icon"></ion-icon>
+        {{static.title}}
+      </button> -->
+      <button menuClose  ion-item *ngFor="let dynamic of dynamicMenus" (click)="navigatePage($event, dynamic)">
+        <ion-icon  [name]="dynamic.icon"></ion-icon>
+        {{dynamic.pageName}}
+      </button>
+      <button menuClose ion-item *ngFor="let authorized of authorizedMenus" (click)="authorizedNavigatePage($event, authorized)">
+        <ion-icon  [name]="authorized.icon"></ion-icon>
+        {{authorized.title}}
+      </button>
+      <ion-list-header class="list-header">Action</ion-list-header>
+      <button *ngIf="!isLoggedIn" menuClose ion-item (click)="showLogin(true)">
+        <ion-icon  [name]="power"></ion-icon>
+       Login
+      </button>
+      <button *ngIf="isLoggedIn" menuClose ion-item (click)="showLogin(false)">
+        <ion-icon  [name]="homeMenu.icon"></ion-icon>
+        Logout
       </button>
     </ion-list>
   </ion-content>
-
 </ion-menu>
-
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
